@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>关键词问答机器人 · FAQ Bot</title>
+<meta name="description" content="免费开源、纯浏览器运行的关键词匹配问答机器人。配置一份问答表，就能得到一个能聊天的FAQ机器人，不用接AI接口，不用后端。">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>关键词<span class="accent">问答</span>机器人</h1>
+    <p class="tagline">左边配置问答表（一行一条，格式：问题 | 答案），右边就是能聊天的机器人。基于关键词匹配，不需要接任何 AI 接口。</p>
+  </header>
+
+  <main class="layout">
+    <section class="panel panel-input">
+      <div class="panel-head">
+        <span>问答表</span>
+        <div class="btns">
+          <button id="btnExample" class="btn btn-ghost">加载示例</button>
+          <button id="btnApply" class="btn btn-primary">应用 →</button>
+        </div>
+      </div>
+      <textarea id="qaInput" spellcheck="false" placeholder="怎么注册账号 | 点击右上角注册按钮，填写手机号和验证码即可
+多久能发货 | 一般下单后 24 小时内发货
+支持退款吗 | 支持，7天内无理由退款"></textarea>
+      <p class="hint">每行一条，用竖线 | 分隔问题和答案。用户提问时会按关键词重合度匹配最接近的一条。</p>
+    </section>
+
+    <section class="panel panel-chat">
+      <div class="panel-head"><span>对话预览</span></div>
+      <div id="chatLog" class="chat-log"></div>
+      <form id="chatForm" class="chat-form">
+        <input id="chatInput" type="text" placeholder="输入问题，回车发送…" autocomplete="off">
+        <button type="submit" class="btn btn-primary">发送</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>MIT 协议开源，纯前端关键词匹配，不联网、不追踪。</p>
+    <p>想要真正理解语义的 AI 对话、私有知识库训练、多渠道嵌入（网页/App/小程序）？<a href="https://inzyxuashop.com/aiduihua-yuanma.html" target="_blank" rel="noopener">看看完整版 AI 对话机器人源码 →</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
